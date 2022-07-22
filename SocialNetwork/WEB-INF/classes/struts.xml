@@ -1,0 +1,54 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="default" extends="struts-default">
+		
+		<action name="register" class="SocialNetwork" method ="register">
+            <result name="SUCCESS">/profile.jsp</result>
+			<result name="NOTCOMPLETE">/errorAllFieldsNotComplete.jsp</result>
+			<result name="PASSWORDSNOTMATCH">/errorPasswordNotMatch.jsp</result>
+			<result name="USEREXISTS">/errorUserExists.jsp</result>
+			<result name="ERRORAGE">/errorAge.jsp</result>
+        </action>
+	
+		<action name="login" class="SocialNetwork" method ="login">
+            <result name="SUCCESS">/profile.jsp</result>
+			<result name="FAILURE">/errorPasswordIncorrect.jsp</result>
+			<result name="NOTFOUND">/errorUserDoesntExist.jsp</result>
+        </action>
+		
+		<action name="questions" class="SocialNetwork" method ="questions">
+            <result name="SUCCESS">/success.jsp</result>
+			<result name="NOTCOMPLETE">/errorAllFieldsNotComplete.jsp</result>
+			<result name="SEEGP">/GP.jsp</result>
+        </action>
+		
+		<action name="addfriend" class="SocialNetwork" method ="addfriend">
+            <result name="SUCCESS">/success.jsp</result>
+			<result name="NOTFOUND">/errorUserDoesntExist.jsp</result>
+			<result name="NOTCOMPLETE">/errorAllFieldsNotComplete.jsp</result>
+        </action>
+		
+		<action name="post" class="SocialNetwork" method ="post">
+            <result name="SUCCESS">/success.jsp</result>
+			<result name="NOTFOUND">/errorUserDoesntExist.jsp</result>
+        </action>
+		
+		<action name="verifyemail" class="SocialNetwork" method ="verifyemail">
+            <result name="SUCCESS">/myFriends.jsp</result>
+			<result name="NOTFOUND">/errorUserDoesntExist.jsp</result>
+        </action>
+		
+		<action name="show" class="SocialNetwork" method ="show">
+            <result name="SUCCESS">/someone.jsp</result>
+			<result name="NOTFOUND">/errorUserDoesntExist.jsp</result>
+        </action>
+		
+		<action name="seepost" class="SocialNetwork" method ="seepost">
+            <result name="SUCCESS">/myposts.jsp</result>
+			<result name="NOTFOUND">/errorUserDoesntExist.jsp</result>
+        </action>
+    </package>
+</struts>
