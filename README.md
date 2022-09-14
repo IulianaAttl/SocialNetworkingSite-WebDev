@@ -2,7 +2,7 @@
 
 An online social network for over 70s who wish to share online with others their age. Users first create accounts entering their name and contact details. Users login using their email and password. When they log in, each user must complete a Covid check-in where they answer the following questions: 
 
-1.What is your temperature? 
+1. What is your temperature? 
 2. Can you breathe easily? 
 3. Do you have a cough? 
 4. Have you lost or had a change in your sense of smell? 
